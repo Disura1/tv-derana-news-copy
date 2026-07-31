@@ -43,6 +43,7 @@ export default function LoginPage() {
       }
 
       localStorage.setItem('access_token', data.access_token);
+      localStorage.setItem('user', JSON.stringify(data.user));
       router.push('/news');
     } catch (err: any) {
       setError(err.message);
